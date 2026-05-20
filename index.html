@@ -9,68 +9,212 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obligatorio 1</title>
-    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header></header>
 
     <section id="influencers">
       <article>
-        <button>Agregar artículo</button>
+        <button>Desplegar Influencers</button>
       </article>
 
       <article>
-        Formulario con los campos correspondientes (Nombre, Mail, % Comisión) y
-        los botones:
-        <button>Cancelar</button>
-        <button>Agregar</button>
+        <button>Agregar influencer</button>
+        <form>
+          <label for="inf-nombre">Nombre:</label>
+          <input type="text" name="inf-nombre" id="inf-nombre" required />
+
+          <label for="inf-email">Email:</label>
+          <input type="email" name="inf-email" id="inf-email" required />
+
+          <label for="inf-comision">% Comisión:</label>
+          <input
+            type="number"
+            name="inf-comision"
+            id="inf-comision"
+            min="0"
+            max="100"
+            required
+          />
+
+          <button>Cancelar</button>
+          <button type="submit">Agregar</button>
+        </form>
       </article>
 
       <article>
         <table>
-          Tabla con los datos de muestra de los influencers y sus respectivas
-          columnas
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>% Comisión</th>
+              <th>Total a cobrar</th>
+              <th>Etiquetas</th>
+              <th>Detalle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ana García</td>
+              <td>ana@gmail.com</td>
+              <td>10%</td>
+              <td>$ 1200</td>
+              <td>fireEmoji</td>
+              <td><button>Ventas</button></td>
+            </tr>
+          </tbody>
         </table>
+        <div class="info-medallas">
+          <p>Información: de medallas de influencers...</p>
+        </div>
       </article>
     </section>
 
     <section id="articulos">
       <article>
-        <button>Agregar artículo"</button>
+        <button>Desplegar artículos</button>
       </article>
 
       <article>
-        Formulario con los campos (Código, Descripción, Precio) y botones
+        <button>Agregar artículo</button>
+        <form>
+          <label for="art-codigo">Código:</label>
+          <input type="text" name="art-codigo" id="art-codigo" required />
+
+          <label for="art-descripcion">Descripción:</label>
+          <input
+            type="text"
+            name="art-descripcion"
+            id="art-descripcion"
+            required
+          />
+
+          <label for="art-precio">Precio:</label>
+          <input
+            type="number"
+            name="art-precio"
+            id="art-precio"
+            min="0"
+            required
+          />
+
+          <button>Cancelar</button>
+          <button type="submit">Agregar</button>
+        </form>
       </article>
 
       <article>
         <table>
-          Tabla de artículos
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>mesa</td>
+              <td>mesa moderna</td>
+              <td>8000</td>
+            </tr>
+          </tbody>
         </table>
+        <div class="info-medalla-articulo">
+          <p>Información: aquí van los artículos más vendidos</p>
+        </div>
       </article>
     </section>
 
     <section id="ventas">
       <article>
-        <button>Agregar venta</button>
+        <button>Desplegar ventas</button>
       </article>
 
       <article>
-        Formulario de venta (Nro, Artículo, Influencer, Cantidad, Medio de
-        venta)
+        <h3>Registrar nueva venta</h3>
+        <form>
+          <label for="vta-nro">Nro (automático):</label>
+          <input
+            type="text"
+            name="vta-nro"
+            id="vta-nro"
+            readonly
+            placeholder="Autogenerado"
+          />
+
+          <label for="vta-articulo">Artículo:</label>
+          <select name="vta-articulo" id="vta-articulo" required>
+            <option value="">Seleccione un artículo</option>
+          </select>
+
+          <label for="vta-influencer">Influencer:</label>
+          <select name="vta-influencer" id="vta-influencer">
+            <option value="">Seleccione un influencer</option>
+          </select>
+
+          <label for="vta-cantidad">Cantidad:</label>
+          <input
+            type="number"
+            name="vta-cantidad"
+            id="vta-cantidad"
+            min="1"
+            required
+          />
+
+          <label for="vta-medio">Medio de venta:</label>
+          <select name="vta-medio" id="vta-medio">
+            <option value="">Seleccione medio (1-6)</option>
+            <option value="1">Medio 1</option>
+            <option value="2">Medio 2</option>
+            <option value="3">Medio 3</option>
+            <option value="4">Medio 4</option>
+            <option value="5">Medio 5</option>
+            <option value="6">Medio 6</option>
+          </select>
+
+          <button>Cancelar</button>
+          <button type="submit">Agregar</button>
+        </form>
       </article>
 
       <article>
         <table>
-          Tabla de registro de ventas con botón de acción (eliminar)
+          <thead>
+            <tr>
+              <th>Nro Venta</th>
+              <th>Códgio de Artículo</th>
+              <th>Nombre de Influencer</th>
+              <th>Cantidad</th>
+              <th>Medio</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Silla</td>
+              <td>Ana García</td>
+              <td>1</td>
+              <td>1-Instagram</td>
+              <td><button type="button">X</button></td>
+            </tr>
+          </tbody>
         </table>
       </article>
 
-      <article>Espacio reservado para el gráfico de burbujas</article>
+      <article class="area-grafico">
+        <h3>Gráfico de burbujas</h3>
+        <div class="espacio-grafico">
+          <p>Área reservada para el gráfico estadístico de burbujas</p>
+        </div>
+      </article>
     </section>
 
     <footer>
-      Aquí van nuestros datos y links a LinkedIn o a la web de la ORT
+      Aquí van nuestros datos y links a LinkedIn o a la web de la ORT,
       configurados para abrirse en una pestaña nueva.
       <p>
         <a
@@ -82,9 +226,13 @@
       <p>
         <a href="#" target="_blank">Victoria Comas | LinkedIn</a>
       </p>
+      <p>
+        Ir al Site oficial de Universidad ORT
+        <a href="https://www.ort.edu.uy/" target="_blank">Aquí</a>
+      </p>
       <p>&copy; Todos los derechos reservados.</p>
     </footer>
 
-    <script src=""></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
