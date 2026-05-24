@@ -12,23 +12,32 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <h1>Sistema de Gestión (Comas - Rodriguez)</h1>
+    </header>
 
     <section id="influencers">
       <article>
-        <button>Desplegar Influencers</button>
+        <h2>Manejo de Influencers</h2>
+
+        <h3>Alta Influencers</h3>
       </article>
 
       <article>
         <button>Agregar influencer</button>
+
+        <p><strong>Datos del influencer a agregar</strong></p>
+
+        <p><strong>Influencer</strong></p>
+
         <form>
-          <label for="inf-nombre">Nombre:</label>
+          <label for="inf-nombre">Nombre</label>
           <input type="text" name="inf-nombre" id="inf-nombre" required />
 
-          <label for="inf-email">Email:</label>
+          <label for="inf-email">Mail</label>
           <input type="email" name="inf-email" id="inf-email" required />
 
-          <label for="inf-comision">% Comisión:</label>
+          <label for="inf-comision">% Comisión</label>
           <input
             type="number"
             name="inf-comision"
@@ -44,10 +53,11 @@
       </article>
 
       <article>
+        <p><strong>Tabla de influencers</strong></p>
         <table>
           <thead>
             <tr>
-              <th>Nombre</th>
+              <th><button>Nombre &#8645;</button></th>
               <th>Email</th>
               <th>% Comisión</th>
               <th>Total a cobrar</th>
@@ -57,33 +67,59 @@
           </thead>
           <tbody>
             <tr>
-              <td>Ana García</td>
-              <td>ana@gmail.com</td>
+              <td>Ana Pérez</td>
+              <td>ana.perez@email.com</td>
+              <td>20%</td>
+              <td>$ 600</td>
+              <td>&#128293; &#128994;</td>
+              <td><button>Ventas</button></td>
+            </tr>
+            <tr>
+              <td>Juan Gómez</td>
+              <td>juan.gomez@email.com</td>
               <td>10%</td>
-              <td>$ 1200</td>
-              <td>fireEmoji</td>
+              <td>$ 30</td>
+              <td></td>
+              <td><button>Ventas</button></td>
+            </tr>
+            <tr>
+              <td>Lucía Martínez</td>
+              <td>lucia.martínez@email.com</td>
+              <td>95%</td>
+              <td>$ 0</td>
+              <td>&#129482;</td>
               <td><button>Ventas</button></td>
             </tr>
           </tbody>
         </table>
         <div class="info-medallas">
-          <p>Información: de medallas de influencers...</p>
+          <p>
+            Información: &#128293; Top comisión (cobra más $) &#129482; Cero
+            ventas &#128994; Venta más cara (mayor monto en una sola venta)
+          </p>
         </div>
       </article>
     </section>
 
     <section id="articulos">
       <article>
-        <button>Desplegar artículos</button>
+        <h2>Manejo de Artículos</h2>
+
+        <h3>Alta de Artículo</h3>
       </article>
 
       <article>
         <button>Agregar artículo</button>
+
+        <p><strong>Datos del artículo a agregar</strong></p>
+
+        <p><strong>Artículo</strong></p>
+
         <form>
-          <label for="art-codigo">Código:</label>
+          <label for="art-codigo">Código</label>
           <input type="text" name="art-codigo" id="art-codigo" required />
 
-          <label for="art-descripcion">Descripción:</label>
+          <label for="art-descripcion">Descripción</label>
           <input
             type="text"
             name="art-descripcion"
@@ -91,7 +127,7 @@
             required
           />
 
-          <label for="art-precio">Precio:</label>
+          <label for="art-precio">Precio</label>
           <input
             type="number"
             name="art-precio"
@@ -106,56 +142,73 @@
       </article>
 
       <article>
+        <p><strong>Tabla de artículos</strong></p>
+
         <table>
           <thead>
             <tr>
-              <th>Código</th>
+              <th><button>Código &#8645;</button></th>
               <th>Descripción</th>
               <th>Precio</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>mesa</td>
-              <td>mesa moderna</td>
-              <td>8000</td>
+              <td>A001 &#11088;</td>
+              <td>Remera algodón básica</td>
+              <td>$ 1000</td>
+            </tr>
+            <tr>
+              <td>A002</td>
+              <td>Zapatillas deportivas</td>
+              <td>$ 300</td>
+            </tr>
+            <tr>
+              <td>A003</td>
+              <td>Gorra ajustable</td>
+              <td>$ 500</td>
             </tr>
           </tbody>
         </table>
         <div class="info-medalla-articulo">
-          <p>Información: aquí van los artículos más vendidos</p>
+          <p>
+            Información: &#11088; Artículos más vendidos (mayor cantidad de
+            unidades vendidas)
+          </p>
         </div>
       </article>
     </section>
 
     <section id="ventas">
       <article>
-        <button>Desplegar ventas</button>
+        <h2>Ventas</h2>
+
+        <h3>Alta de ventas</h3>
       </article>
 
       <article>
-        <h3>Registrar nueva venta</h3>
+        <button>Agregar venta</button>
+
+        <p><strong>Datos de la venta a agregar</strong></p>
+
+        <p><strong>Venta</strong></p>
+
         <form>
-          <label for="vta-nro">Nro (automático):</label>
-          <input
-            type="text"
-            name="vta-nro"
-            id="vta-nro"
-            readonly
-            placeholder="Autogenerado"
-          />
-
-          <label for="vta-articulo">Artículo:</label>
-          <select name="vta-articulo" id="vta-articulo" required>
-            <option value="">Seleccione un artículo</option>
+          <label for="vta-nro">Nro: 3 Artículo</label>
+          <select name="vta-nro" id="vta-nro">
+            <option value="">A001</option>
+            <option value="">A002</option>
+            <option value="">A003</option>
           </select>
 
-          <label for="vta-influencer">Influencer:</label>
+          <label for="vta-influencer">Influencer</label>
           <select name="vta-influencer" id="vta-influencer">
-            <option value="">Seleccione un influencer</option>
+            <option value="">Ana Pérez</option>
+            <option value="">Juan Gómez</option>
+            <option value="">Lucía Martínez</option>
           </select>
 
-          <label for="vta-cantidad">Cantidad:</label>
+          <label for="vta-cantidad">Cantidad</label>
           <input
             type="number"
             name="vta-cantidad"
@@ -164,15 +217,14 @@
             required
           />
 
-          <label for="vta-medio">Medio de venta:</label>
+          <label for="vta-medio">Medio</label>
           <select name="vta-medio" id="vta-medio">
-            <option value="">Seleccione medio (1-6)</option>
-            <option value="1">Medio 1</option>
-            <option value="2">Medio 2</option>
-            <option value="3">Medio 3</option>
-            <option value="4">Medio 4</option>
-            <option value="5">Medio 5</option>
-            <option value="6">Medio 6</option>
+            <option value="">1-Instagram</option>
+            <option value="">2-YouTube</option>
+            <option value="">3-X</option>
+            <option value="">4-TikTok</option>
+            <option value="">5-Facebook</option>
+            <option value="">6-Otros</option>
           </select>
 
           <button>Cancelar</button>
@@ -181,11 +233,12 @@
       </article>
 
       <article>
+        <p><strong>Tabla de ventas (ordenada por número de venta)</strong></p>
         <table>
           <thead>
             <tr>
               <th>Nro Venta</th>
-              <th>Códgio de Artículo</th>
+              <th>Código de Artículo</th>
               <th>Nombre de Influencer</th>
               <th>Cantidad</th>
               <th>Medio</th>
@@ -194,12 +247,20 @@
           </thead>
           <tbody>
             <tr>
-              <td>2</td>
-              <td>Silla</td>
-              <td>Ana García</td>
               <td>1</td>
+              <td>A001</td>
+              <td>Ana Pérez</td>
+              <td>3</td>
               <td>1-Instagram</td>
-              <td><button type="button">X</button></td>
+              <td><button>&#10060;</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>A002</td>
+              <td>Juan Gómez</td>
+              <td>1</td>
+              <td>2-YouTube</td>
+              <td><button>&#10060;</button></td>
             </tr>
           </tbody>
         </table>
@@ -208,14 +269,14 @@
       <article class="area-grafico">
         <h3>Gráfico de burbujas</h3>
         <div class="espacio-grafico">
-          <p>Área reservada para el gráfico estadístico de burbujas</p>
+          <!--Área reservada para el gráfico estadístico de burbujas-->
         </div>
       </article>
     </section>
 
     <footer>
-      Aquí van nuestros datos y links a LinkedIn o a la web de la ORT,
-      configurados para abrirse en una pestaña nueva.
+      <!-- Aquí van nuestros datos y links a LinkedIn o a la web de la ORT,
+      configurados para abrirse en una pestaña nueva. -->
       <p>
         <a
           href="https://www.linkedin.com/in/luan-rodr%C3%ADguez-3a075930a/"
@@ -230,7 +291,7 @@
         Ir al Site oficial de Universidad ORT
         <a href="https://www.ort.edu.uy/" target="_blank">Aquí</a>
       </p>
-      <p>&copy; Todos los derechos reservados.</p>
+      <p>&copy; Todos los derechos reservados 2026.</p>
     </footer>
 
     <script src="js/main.js"></script>
